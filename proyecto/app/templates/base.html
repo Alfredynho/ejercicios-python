@@ -1,0 +1,25 @@
+  <!DOCTYPE html>
+    {% if title %}
+      {{title}}
+    {% else %}
+      Mi Primera App de Flask
+    {% endif %}
+      <nav>
+        <ul>
+	  <li><a href="#">Link 1</a></li>
+	  <li><a href="#">Link 2</a></li>
+	  <li><a href="#">Link 3</a></li>
+        </ul>
+      </nav>
+      {% block content %}
+ <h4>Esta es una lista de cosas que me gusta</h4>
+  <ul>{% for item in cosas %}
+  <li>{{item}}</li>
+  </ul>
+  {% endfor %}
+      {% endblock %}
+      <footer>
+        {% block footer %}
+        {% endblock %}
+         @ Mi empresa
+      </footer>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <style>
+  div {
+    background: #ece023;
+    width: 30px;
+    height: 40px;
+    margin: 2px;
+    float: left;
+  }
+    p {
+    background: #F61227;
+    width: 30px;
+    height: 40px;
+    margin: 2px;
+    float: left;
+  }
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div>a</div>
+<p>p</p>
+
+<script>
+for ( var i = 0; i < 5; i++ ) {
+  $( "<div>" ).appendTo( document.body );
+  $("<p>").appendTo(document.body);
+}
+$( "div" ).click(function() {
+  $( this ).hide( 2000, function() {
+    $( this ).remove();
+  });
+});
+
+$("p").click(function(){
+  $(this).hide(3000,function(){
+    $(this).remove();
+  });
+});
+</script>
+
+</body>
+</html>

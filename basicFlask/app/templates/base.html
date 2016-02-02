@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	{% if title %}
+		<title>{{title}}</title>
+	{% else %}
+		<title>Mi Primera App de Flask</title>
+	{% endif %}
+</head>
+<body bgcolor="#05D7FF">
+    <div class="center">
+      <a href="#" class="button">Press Here</a>
+    </div>
+
+    <script type="text/javascript" src="scripts.js"></script>
+	<nav>
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+	</nav>
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+
+	<footer>
+		{% block footer %}
+		{% endblock %}
+		<span>&copy; Mi empresaaa</span>
+	</footer>
+</body>
+</html>
